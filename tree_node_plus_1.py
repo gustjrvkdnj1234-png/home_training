@@ -13,7 +13,7 @@ for tc in range(1, t+1):
         tree[idx] = val
     
     for i in range(N, 1, -1):
-        parent = i // 2
-        tree[parent] += tree[i]
+        parent = i // 2 #몫연사자로 2개 동일하게 모으기
+        tree[parent] += tree[i] #더해서 모아주기
 
     print(f'#{tc} {tree[L]}')
